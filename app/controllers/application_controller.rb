@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/recipes/:id/edit' do
-    @recipe = Recipe.find_by(params[:id])
+    @recipe = Recipe.find_by(id: params[:id])
     erb :edit
   end
 
